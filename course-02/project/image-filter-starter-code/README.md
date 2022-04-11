@@ -46,3 +46,28 @@ Prevent requests without valid authentication headers.
 
 Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
 > !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
+
+### Git Repository
+
+https://github.com/SoftwareDevPro/cloud-developer
+
+### Screenshot
+
+Screenshot from EB Application Dashboard located:
+
+cloud-developer\course-02\project\image-filter-starter-code\deployment_screenshots\deployment_screenshot.png
+
+### Endpoint URLs for running EB
+
+http://
+image-filter-project-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://images.pexels.com/photos/7633693/pexels-photo-7633693.jpeg
+
+http://
+image-filter-project-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_960_720.jpg
+
+
+### Invalid URL/images
+
+https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg [404 not found]
+https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg [unable to process]
+https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Golden_tabby_and_white_kitten_n01.jpg [404 not found]
