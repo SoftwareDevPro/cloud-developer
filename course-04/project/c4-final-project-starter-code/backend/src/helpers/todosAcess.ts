@@ -7,7 +7,7 @@ import { TodoUpdate } from '../models/TodoUpdate';
 
 const XAWS = AWSXRay.captureAWS(AWS)
 
-const logger = createLogger('TodosAccess')
+const logger = createLogger('TodoAccess')
   
 // TODO: Implement the dataLayer logic
 export class TodoAccess {
@@ -109,8 +109,8 @@ export class TodoAccess {
           todoId: update.todoId, 
           userId: update.userId 
         },
-        ExpressionAttributeNames: {"#aurl": "attachmentUrl"},
-        UpdateExpression: "set #aurl = :attachmentUrl",
+        ExpressionAttributeNames: {"#A": "attachmentUrl"},
+        UpdateExpression: "set #A = :attachmentUrl",
         ExpressionAttributeValues: {
             ":attachmentUrl": update.attachmentUrl,
         },

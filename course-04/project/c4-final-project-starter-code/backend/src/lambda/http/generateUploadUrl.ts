@@ -21,7 +21,7 @@ export const handler = middy(
     
     logger.info("processing event", { event: event })
 
-    const updateUrl = attachmentUtils.getUploadUrl(todoId)
+    const uploadUrl = attachmentUtils.getUploadUrl(todoId)
     const userId = getUserId(event)
     const url = {
       attachmentUrl: `https://${bucketName}.s3.amazonaws.com/${todoId}`
@@ -32,7 +32,7 @@ export const handler = middy(
     return {
       statusCode: 200,
       body: JSON.stringify({
-        updateUrl
+        uploadUrl
       })
     }
   }

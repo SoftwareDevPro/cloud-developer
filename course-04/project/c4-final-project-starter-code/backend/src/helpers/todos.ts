@@ -44,13 +44,13 @@ export async function updateTodo(req: UpdateTodoRequest, userId: string, todoId:
     }, todoId, userId)
 }
 
-export async function createAttachmentPresignedUrl(url, userId: string, todoId: string): Promise<TodoItem> {
-    logger.info("createAttachmentPresignedUrl", { userId: userId, todoId: todoId, url: url.attachmentUrl });
+export async function createAttachmentPresignedUrl(updateTodo, userId: string, todoId: string): Promise<TodoItem> {
+    logger.info("createAttachmentPresignedUrl", { userId: userId, todoId: todoId, url: updateTodo.attachmentUrl });
     
     return await todoAccess.createAttachmentPresignedUrl({
       userId,
       todoId,
-      attachmentUrl: url.attachmentUrl,
+      attachmentUrl: updateTodo.attachmentUrl,
     })
 }
 
